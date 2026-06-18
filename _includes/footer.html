@@ -1,10 +1,12 @@
 <footer class="footer">
 	<ul class="footer-links">
-		<li><a href="http://github.com/alainpham"> <i
-				class="fa fa-inverse fa-github fa-3x"></i></a></li>
-		<li><a href="http://www.linkedin.com/in/alainpham"> <i
-				class="fa fa-inverse fa-linkedin-square fa-3x"></i></a></li>
-		<li><a href="https://twitter.com/koint"> <i
-				class="fa fa-inverse fa-twitter fa-3x"></i></a></li>
+		{% for social in site.data.settings.social %}
+		<li>
+			<a href="{{ social.link }}" title="{{ social.name }}">
+				<i class="fa fa-inverse fa-{{ social.icon }} fa-3x"></i>
+			</a>
+		</li>
+		{% endfor %}
 	</ul>
+	<p class="footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</p>
 </footer>
