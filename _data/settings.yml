@@ -1,6 +1,12 @@
 disqus:
-  comments: true
-  disqus_shortname: 'apham'
+  comments: false
+  disqus_shortname: 'yolofordream'
+
+utterances:
+  enabled: true
+  repo: 'YoloForDream/YoloForDream.github.io'
+  issue_term: 'pathname'
+  theme: 'github-light'
 
 google-ID: 'UA-91332049-1'
 
