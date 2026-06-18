@@ -44,11 +44,15 @@
 		</div>
 	</nav>
 		{% if page.noimage %}
-		{% else %}
-		<img
-			alt="{{ page.title }}"
-			src="/assets/images/{{page.id}}/top.jpg" class="img-responsive">
-		{% endif %}
+	{% elsif page.id %}
+	<img
+		alt="{{ page.title }}"
+		src="/assets/images/{{page.id}}/top.gif" class="img-responsive">
+	{% else %}
+	<img
+		alt="{{ site.title }}"
+		src="/assets/images/top.gif" class="img-responsive">
+	{% endif %}
 
 	<div class="jumbotron  clearfix">
 
