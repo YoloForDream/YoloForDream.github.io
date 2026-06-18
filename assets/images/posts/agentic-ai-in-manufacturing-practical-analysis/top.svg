@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="factoryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- Factory Section (Left) -->
+  <g transform="translate(50, 120)">
+    <!-- Factory Building -->
+    <rect x="0" y="80" width="150" height="100" fill="#3a3a5c" rx="5"/>
+    <rect x="10" y="100" width="30" height="30" fill="#ffd700" opacity="0.8"/>
+    <rect x="50" y="100" width="30" height="30" fill="#ffd700" opacity="0.6"/>
+    <rect x="90" y="100" width="30" height="30" fill="#ffd700" opacity="0.4"/>
+    <rect x="10" y="140" width="30" height="30" fill="#00bfff" opacity="0.6"/>
+    <rect x="50" y="140" width="30" height="30" fill="#00bfff" opacity="0.8"/>
+    <rect x="90" y="140" width="30" height="30" fill="#00bfff" opacity="0.4"/>
+    <!-- Factory Chimney -->
+    <rect x="120" y="40" width="25" height="40" fill="#4a4a6a"/>
+    <ellipse cx="132" cy="40" rx="15" ry="8" fill="#888" opacity="0.5"/>
+    <!-- Factory Label -->
+    <text x="75" y="210" fill="#fff" font-family="Arial" font-size="14" text-anchor="middle">Manufacturing</text>
+  </g>
+
+  <!-- AI/Agent Section (Right) -->
+  <g transform="translate(600, 120)">
+    <!-- Robot Head -->
+    <rect x="25" y="50" width="100" height="80" fill="#2a2a4a" rx="10"/>
+    <!-- Eyes -->
+    <circle cx="55" cy="80" r="10" fill="url(#aiGradient)" filter="url(#glow)"/>
+    <circle cx="95" cy="80" r="10" fill="url(#aiGradient)" filter="url(#glow)"/>
+    <!-- Antenna -->
+    <line x1="75" y1="50" x2="75" y2="30" stroke="#4facfe" stroke-width="3"/>
+    <circle cx="75" cy="25" r="8" fill="url(#aiGradient)" filter="url(#glow)"/>
+    <!-- Robot Body -->
+    <rect x="35" y="135" width="80" height="60" fill="#2a2a4a" rx="5"/>
+    <!-- Robot Buttons -->
+    <circle cx="55" cy="155" r="6" fill="#f5576c"/>
+    <circle cx="75" cy="155" r="6" fill="#ffd700"/>
+    <circle cx="95" cy="155" r="6" fill="#4facfe"/>
+    <!-- Robot Label -->
+    <text x="75" y="220" fill="#fff" font-family="Arial" font-size="14" text-anchor="middle">Agentic AI</text>
+  </g>
+
+  <!-- Central Intelligence Hub -->
+  <g transform="translate(300, 160)">
+    <!-- Central Circle -->
+    <circle cx="100" cy="40" r="45" fill="#2a2a4a" stroke="url(#aiGradient)" stroke-width="3" filter="url(#glow)"/>
+    <!-- Brain/Circuit Pattern -->
+    <circle cx="100" cy="40" r="25" fill="none" stroke="#4facfe" stroke-width="2" opacity="0.7"/>
+    <circle cx="100" cy="40" r="15" fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.5"/>
+    <circle cx="100" cy="40" r="5" fill="#4facfe"/>
+    <!-- Connection Lines to Factory -->
+    <path d="M 55 40 Q 150 40 160 80" fill="none" stroke="url(#factoryGradient)" stroke-width="2" stroke-dasharray="5,5"/>
+    <path d="M 145 40 Q 250 40 160 0" fill="none" stroke="url(#factoryGradient)" stroke-width="2" stroke-dasharray="5,5"/>
+    <!-- Central Label -->
+    <text x="100" y="100" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Smart Hub</text>
+  </g>
+
+  <!-- Connection Lines -->
+  <g stroke="#4facfe" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Factory to Hub -->
+    <path d="M 200 180 Q 250 180 300 180" stroke-dasharray="8,4"/>
+    <!-- Hub to Agent -->
+    <path d="M 500 180 Q 550 180 600 180" stroke-dasharray="8,4"/>
+  </g>
+
+  <!-- Data Flow Arrows -->
+  <g fill="#4facfe" opacity="0.8">
+    <polygon points="280,175 290,180 280,185"/>
+    <polygon points="510,175 520,180 510,185"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="50" fill="#fff" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">
+    Agentic AI in Manufacturing
+  </text>
+  <text x="400" y="75" fill="#4facfe" font-family="Arial" font-size="14" text-anchor="middle">
+    Intelligent Automation &amp; Optimization
+  </text>
+
+  <!-- Bottom Icons -->
+  <g transform="translate(100, 320)">
+    <!-- Icon 1: Data Processing -->
+    <circle cx="30" cy="30" r="25" fill="#2a2a4a" stroke="#4facfe" stroke-width="2"/>
+    <text x="30" y="35" fill="#4facfe" font-family="Arial" font-size="16" text-anchor="middle">⚙</text>
+    <text x="30" y="70" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Data</text>
+  </g>
+
+  <g transform="translate(250, 320)">
+    <!-- Icon 2: AI Processing -->
+    <circle cx="30" cy="30" r="25" fill="#2a2a4a" stroke="#f5576c" stroke-width="2"/>
+    <text x="30" y="35" fill="#f5576c" font-family="Arial" font-size="16" text-anchor="middle">🧠</text>
+    <text x="30" y="70" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">AI</text>
+  </g>
+
+  <g transform="translate(400, 320)">
+    <!-- Icon 3: Decision -->
+    <circle cx="30" cy="30" r="25" fill="#2a2a4a" stroke="#ffd700" stroke-width="2"/>
+    <text x="30" y="35" fill="#ffd700" font-family="Arial" font-size="16" text-anchor="middle">⚡</text>
+    <text x="30" y="70" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Decide</text>
+  </g>
+
+  <g transform="translate(550, 320)">
+    <!-- Icon 4: Action -->
+    <circle cx="30" cy="30" r="25" fill="#2a2a4a" stroke="#00f2fe" stroke-width="2"/>
+    <text x="30" y="35" fill="#00f2fe" font-family="Arial" font-size="16" text-anchor="middle">🚀</text>
+    <text x="30" y="70" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Act</text>
+  </g>
+
+  <!-- Arrows between icons -->
+  <g fill="#4facfe">
+    <polygon points="190,350 200,355 190,360"/>
+    <polygon points="340,350 350,355 340,360"/>
+    <polygon points="490,350 500,355 490,360"/>
+  </g>
+</svg>
