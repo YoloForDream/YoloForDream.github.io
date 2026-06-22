@@ -64,13 +64,13 @@ for frame in range(30):
     # 中间：AI 文字和核心
     cx, cy = width // 2, height // 2
     
-    # "AGENTIC AI" 文字
+    # "AGENTIC AI" 文字 - 向上移动，增加与下方轮子的距离
     text_alpha = 0.8 + 0.2 * math.sin(frame * 0.3)
-    draw.text((cx-120, cy-80), "AGENTIC AI", fill=(int(0*text_alpha), int(242*text_alpha), int(254*text_alpha)), font_size=36)
-    draw.text((cx-100, cy-40), "INTELLIGENT SYSTEMS", fill=(int(79*text_alpha), int(172*text_alpha), int(254*text_alpha)), font_size=18)
+    draw.text((cx-120, cy-100), "AGENTIC AI", fill=(int(0*text_alpha), int(242*text_alpha), int(254*text_alpha)), font_size=36)
+    draw.text((cx-100, cy-60), "INTELLIGENT SYSTEMS", fill=(int(79*text_alpha), int(172*text_alpha), int(254*text_alpha)), font_size=18)
     
-    # 六边形框架
-    hex_points = [(cx, cy-50), (cx+43, cy-25), (cx+43, cy+25), (cx, cy+50), (cx-43, cy+25), (cx-43, cy-25)]
+    # 六边形框架 - 向下移动
+    hex_points = [(cx, cy-30), (cx+26, cy-15), (cx+26, cy+15), (cx, cy+30), (cx-26, cy+15), (cx-26, cy-15)]
     hex_alpha = 0.5 + 0.5 * math.sin(frame * 0.2)
     draw.polygon(hex_points, outline=(int(0*hex_alpha), int(242*hex_alpha), int(254*hex_alpha)), width=2)
     
@@ -78,12 +78,12 @@ for frame in range(30):
     for i in range(6):
         angle = (frame * 12 + i * 60) % 360
         rad = math.radians(angle)
-        px = cx + int(30 * math.cos(rad))
-        py = cy + int(30 * math.sin(rad))
-        draw.ellipse([px-4, py-4, px+4, py+4], fill=(79, 172, 254))
+        px = cx + int(20 * math.cos(rad))
+        py = cy + int(20 * math.sin(rad))
+        draw.ellipse([px-3, py-3, px+3, py+3], fill=(79, 172, 254))
     
     # 中心脉冲
-    core_pulse = 8 + int(4 * math.sin(frame * 0.5))
+    core_pulse = 6 + int(3 * math.sin(frame * 0.5))
     draw.ellipse([cx-core_pulse, cy-core_pulse, cx+core_pulse, cy+core_pulse], fill=(0, 242, 254))
     
     # 右侧：数据流可视化
