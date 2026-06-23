@@ -29,7 +29,9 @@
 
 	{% if page.id %}
 	<p>Originally published {{ page.published | date: '%B %d, %Y' }}
-    <br> Latest update {{ page.date | date: '%B %d, %Y' }}</p>
+    {% if page.last_modified_at %}
+    <br> Latest update {{ page.last_modified_at | date: '%B %d, %Y' }}
+    {% endif %}</p>
 
 	{% endif %}
 
