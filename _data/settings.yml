@@ -29,7 +29,7 @@ menu:
         icon: twitter
         link: https://twitter.com/yolofordream
       - name: WeChat
-        icon: weixin
+        icon: comment
         link: #
 
 social:
