@@ -32,8 +32,7 @@ h3:before {
 }
 
 .jumbotron {
-	background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a0a2a 100%);
-    border-bottom: 2px solid rgba(0, 242, 254, 0.3);
+	background: #719d7d;
 }
 
 .jumbotron h1 {
