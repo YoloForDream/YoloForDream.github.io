@@ -213,12 +213,13 @@ h3:before {
 }
 
 /* ============== 字节跳动风格特效 ============== */
-.bytedance-title {
-    background: linear-gradient(90deg, #00f5ff, #ff00ff, #ff6b00, #00f5ff);
-    background-size: 400% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.jumbotron .bytedance-title {
+    background: linear-gradient(90deg, #00f5ff, #ff00ff, #ff6b00, #00f5ff) !important;
+    background-size: 400% 100% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
     animation: bytedanceGradient 3s ease infinite, bytedanceGlow 2s ease-in-out infinite alternate;
     text-shadow: 
         0 0 10px rgba(0, 245, 255, 0.5),

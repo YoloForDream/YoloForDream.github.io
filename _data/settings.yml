@@ -28,6 +28,9 @@ menu:
       - name: Twitter
         icon: twitter
         link: https://twitter.com/yolofordream
+      - name: WeChat
+        icon: weixin
+        link: #
 
 social:
   - name: GitHub
