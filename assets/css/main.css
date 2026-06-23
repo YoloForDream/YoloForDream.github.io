@@ -211,3 +211,34 @@ h3:before {
 .pagination-current {
 	font-weight: bold;
 }
+
+/* ============== 字节跳动风格特效 ============== */
+.bytedance-title {
+    background: linear-gradient(90deg, #00f5ff, #ff00ff, #ff6b00, #00f5ff);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: bytedanceGradient 3s ease infinite, bytedanceGlow 2s ease-in-out infinite alternate;
+    text-shadow: 
+        0 0 10px rgba(0, 245, 255, 0.5),
+        0 0 20px rgba(0, 245, 255, 0.3),
+        0 0 30px rgba(255, 0, 255, 0.3);
+    letter-spacing: 0.3em;
+    font-weight: 700;
+}
+
+@keyframes bytedanceGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes bytedanceGlow {
+    from {
+        filter: brightness(1) drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+    }
+    to {
+        filter: brightness(1.2) drop-shadow(0 0 20px rgba(255, 0, 255, 0.8));
+    }
+}
