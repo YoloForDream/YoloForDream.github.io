@@ -1,0 +1,126 @@
+---
+layout: default
+title: "RAG vs Agentic RAG: A Comparative Analysis"
+date: 2026-06-23
+published: 2026-06-23
+last_modified_at: 2026-06-23
+comments: true
+categories: [Artificial Intelligence, LLM, RAG]
+tags: [RAG, Agentic RAG, Retrieval-Augmented Generation, AI, Large Language Model]
+---
+
+<h1>Introduction</h1>
+
+<p>In recent years, artificial intelligence has developed rapidly, prompting people to reflect on the importance of continuous learning in this era. This article takes RAG technology as an example to discuss the similarities and differences between RAG and Agentic RAG.</p>
+
+<!--more-->
+
+<h1>I. Definition Comparison</h1>
+
+<p><strong>RAG (Retrieval-Augmented Generation)</strong> was first proposed by Facebook AI Research (FAIR) in the paper "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks". RAG gained popularity in 2023. It can be understood as a local knowledge base retrieval system implemented through LLM, where the accuracy of output knowledge depends on the knowledge base itself. This approach has obvious limitations, leading to the proposal of Agentic RAG, which effectively combines dynamic retrieval with knowledge bases to address the shortcomings of traditional RAG.</p>
+
+<p>1. Traditional RAG improves the accuracy of language model responses through "retrieval + generation"; while Agentic RAG makes autonomous judgments through LLM technology based on the original knowledge base, achieving an organic combination of external content and knowledge base retrieval results, thereby improving answer accuracy.</p>
+
+<table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Comparison Item</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">RAG</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Agentic RAG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Core Goal</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Improve answer accuracy</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Autonomous reasoning and action</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Thinking Mode</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Retrieve first, then generate</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Determine needs, then retrieve, then act</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Role Analogy</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">QA assistant with enhanced memory</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Autonomous thinking agent</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>II. Architecture Comparison</h1>
+
+<p>1. Traditional RAG Architecture: User Question → Vectorization → Retrieval → Get Top-K Documents → Concatenate Context → Generate Answer.</p>
+
+<p><em>As shown in Figure 1:</em></p>
+<p><img src="/assets/images/posts/rag-vs-agentic-rag-comparative-analysis/traditional-rag.gif" alt="Traditional RAG Architecture" style="max-width: 100%; height: auto; margin: 10px 0;"></p>
+<p><em>Figure 1: Traditional RAG Architecture</em></p>
+
+<p>2. Agentic RAG Architecture: User Question → Reasoning Loop → Retrieval Agent → Dynamic Retrieval → Execute or Generate → Reflect and Correct.</p>
+
+<p><em>As shown in Figure 2:</em></p>
+<p><img src="/assets/images/posts/rag-vs-agentic-rag-comparative-analysis/agentic-rag.gif" alt="Agentic RAG Architecture" style="max-width: 100%; height: auto; margin: 10px 0;"></p>
+<p><em>Figure 2: Agentic RAG Architecture</em></p>
+
+<h1>III. Capability Comparison</h1>
+
+<table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Capability Dimension</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">RAG</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Agentic RAG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Retrieval Strategy</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Fixed top-k</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Dynamic, multi-round, intelligent retrieval</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Context Management</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Simple concatenation</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Multi-round memory management</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Reasoning Ability</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">None</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Self-reflection and correction</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Tool Calling</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">None</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Supports external tool calls</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 12px;">Autonomy</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">Low</td>
+      <td style="border: 1px solid #ddd; padding: 12px;">High</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note: Fixed top-k is an algorithm for model decoding, which optimizes the greedy algorithm (highest probability answer). When selecting answers, it selects the top K results instead of the single result with the highest probability or score.</em></p>
+
+<h1>IV. Analogies</h1>
+
+<p>RAG is like an assistant who can quickly look up information, while Agentic RAG is like a researcher who can independently look up information, verify it, and analyze it.</p>
+
+<h1>V. Examples</h1>
+
+<p><strong>RAG Example:</strong> User asks "What does this device's error code mean?" — Retrieve the manual and generate an answer.</p>
+
+<p><strong>Agentic RAG Example:</strong> User asks "What are effective solutions when this error code appears on the device and how can we reduce the occurrence rate of this error?" — Multi-layer reasoning, retrieve device exception handling records, call external APIs, verify, and then generate an answer.</p>
+
+<h1>VI. Development Trends</h1>
+
+<p>Agentic RAG is a critical stage in the evolution of RAG towards "autonomous agents". The future trend is: RAG → Agentic RAG → Autonomous Agent.</p>
+
+<h1>VII. Conclusion</h1>
+
+<p>When choosing between RAG and Agentic RAG, it is necessary to proceed from actual needs. Although Agentic RAG has stronger performance, it also brings corresponding cost increases. It is recommended to choose the appropriate retrieval scheme and technology based on the actual business requirements.</p>
+
+<h1>References</h1>
+
+<p>[1] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. arXiv preprint arXiv:2005.11401.</p>
