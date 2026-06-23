@@ -1,0 +1,55 @@
+`/Users/reywang` is not writable.
+Bundler will use `/var/folders/5h/mffvs6yd0yq65k_h0fkl4cmh0000gn/T/bundler20260623-35831-fxo4zl35831' as your home directory temporarily.
+Configuration file: /Users/reywang/Desktop/YoloForDream.github.io/_config.yml
+            Source: /Users/reywang/Desktop/YoloForDream.github.io
+       Destination: /Users/reywang/Desktop/YoloForDream.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.042 seconds.
+ Auto-regeneration: enabled for '/Users/reywang/Desktop/YoloForDream.github.io'
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+/opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/socket.rb:205:in 'Socket#bind': Address already in use - bind(2) for 0.0.0.0:4000 (Errno::EADDRINUSE)
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/socket.rb:205:in 'Addrinfo#listen'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/socket.rb:1223:in 'block in Socket.tcp_server_sockets'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/socket.rb:231:in 'Array#each'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/socket.rb:231:in 'Addrinfo.foreach'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/socket.rb:1221:in 'Socket.tcp_server_sockets'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/utils.rb:60:in 'WEBrick::Utils.create_listeners'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:130:in 'WEBrick::GenericServer#listen'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:111:in 'WEBrick::GenericServer#initialize'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:47:in 'WEBrick::HTTPServer#initialize'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:216:in 'Jekyll::Commands::Serve.start_up_webrick'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:102:in 'Jekyll::Commands::Serve.process'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'block in Jekyll::Command.process_with_graceful_fail'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Array#each'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Jekyll::Command.process_with_graceful_fail'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:85:in 'block (2 levels) in Jekyll::Commands::Serve.init_with_program'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'block in Mercenary::Command#execute'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Array#each'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Mercenary::Command#execute'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in 'Mercenary::Program#go'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in 'Mercenary.program'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/exe/jekyll:15:in '<top (required)>'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/rubygems.rb:305:in 'Kernel#load'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/rubygems.rb:305:in 'Gem.activate_and_load_bin_path'
+	from /opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll:25:in '<top (required)>'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/cli/exec.rb:61:in 'Kernel.load'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/cli/exec.rb:61:in 'Bundler::CLI::Exec#kernel_load'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/cli/exec.rb:24:in 'Bundler::CLI::Exec#run'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/cli.rb:504:in 'Bundler::CLI#exec'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/cli.rb:29:in 'Bundler::CLI.start'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-4.0.11/exe/bundle:28:in 'block in <top (required)>'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-4.0.11/exe/bundle:20:in '<top (required)>'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/rubygems.rb:305:in 'Kernel#load'
+	from /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/rubygems.rb:305:in 'Gem.activate_and_load_bin_path'
+	from /opt/homebrew/bin/bundle:25:in '<main>'
